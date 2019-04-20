@@ -1,0 +1,40 @@
+.wrapper {
+  display: inline-block;
+  color: rgba(92, 92, 92, 255);
+  font-family: ﻿TitilliumWeb-Bold, ﻿TitilliumWeb-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+  display: flex;
+  justify-content: space-around;
+}
+
+.wrapper > * {
+  flex: 0 0 25%
+}
+
+
+.feature__figure-area {
+  display: flex;
+  margin: 0;
+}
+
+.feature__figure-img {
+  margin-right: 20px;
+}
+
+.feature__figure-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature__figure-title {
+  font-size: 30pt;
+}
+
+.feature__figure-subtitle {
+  font-size: 18pt;
+}
+
+.feature__figure-desc {
+  margin-top: 40px;
+  font-size: 14pt;
+  margin-left: 10px;
+}
