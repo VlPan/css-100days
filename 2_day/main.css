@@ -1,0 +1,128 @@
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  background: radial-gradient(circle at 50%, #4286f4, #41f4b5);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.wrapper{
+  z-index: 10;
+  opacity: 0;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: -25px;
+  right: -5px;
+  left: -5px;
+  height: 60px;
+}
+
+.menu-icon {
+  z-index: 1;
+  position: relative;
+  width: 85px;
+  height: 10px;
+  background-color: rgb(254, 254, 254);
+  border-radius: 2px; 
+  -webkit-box-shadow: 10px 13px 24px -6px rgba(0,0,0,0.3);
+  -moz-box-shadow: 10px 13px 24px -6px rgba(0,0,0,0.3);
+  box-shadow: 10px 13px 24px -6px rgba(0,0,0,0.3);
+}
+
+.menu-icon::after{
+  z-index: 2;
+  content: '';
+  opacity: 1;
+  display: block;
+  position: absolute;
+  background-color: rgb(254, 254, 254);
+  width: 85px;
+  height: 10px;
+  top: 20px;
+  -webkit-box-shadow: 10px 13px 24px -6px rgba(0,0,0,0.3);
+  -moz-box-shadow: 10px 13px 24px -6px rgba(0,0,0,0.3);
+  box-shadow: 10px 13px 24px -6px rgba(0,0,0,0.3);
+  transition: all .3s;
+}
+
+.menu-icon::before{
+  z-index: 2;
+  content: '';
+  opacity: 1;
+  display: block;
+  position: absolute;
+  background-color: rgb(254, 254, 254);
+  width: 85px;
+  height: 10px;
+  top: -20px;
+  transition: all .3s;
+  -webkit-box-shadow: 10px 13px 24px -6px rgba(0,0,0,0.3);
+  -moz-box-shadow: 10px 13px 24px -6px rgba(0,0,0,0.3);
+  box-shadow: 10px 13px 24px -6px rgba(0,0,0,0.3);
+}
+
+#c {
+  display: none
+}
+#c:checked ~ .menu-icon::after {
+  top: 0;
+  animation: fadeOut 0s .3s forwards;
+}
+
+#c:checked ~ .menu-icon::before {
+  top: 0;
+  animation: rotate-2 .4s .3s forwards;
+}
+
+#c:checked ~ .menu-icon {
+  transform: scale(1);
+  animation: rotate-1 .4s .3s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rotate-1 {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(-225deg)
+  }
+}
+
+@keyframes rotate-2 {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(270deg)
+  }
+}
