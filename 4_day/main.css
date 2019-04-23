@@ -1,0 +1,77 @@
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #e56262;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+.circle {
+  border-radius: 50%;
+  -webkit-box-shadow: 9px 13px 35px -3px rgba(0,0,0,0.69); 
+  background: #FFF;
+  box-shadow: 9px 13px 35px -3px rgba(0,0,0,0.69);  
+}
+
+.circle-1 {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  /* animation: becomeBigger 2s linear 0s infinite; */
+}
+
+.circle-2 {
+  position: absolute;
+  transform: scale(0);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 70%;
+  /* animation: becomeBigger 2s linear 1s infinite; */
+}
+
+.circle-3 {
+  position: absolute;
+  transform: scale(0);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  /* animation: becomeBigger 4s linear 8s infinite; */
+}
+
+@keyframes becomeBigger{
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(2);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
