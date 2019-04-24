@@ -1,0 +1,61 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+svg {
+  stroke-dasharray:2300;
+  stroke-dashoffset:2300;
+  animation:dash 7s linear forwards;
+}
+
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+
+.dot-views {
+  fill: #fa8181;
+}
+
+.dot-purchases {
+  fill: lightskyblue;
+}
+
+.line-views {
+  fill: none;		
+  stroke: #fa8181;
+  stroke-width: 3px;
+}
+
+.line-purchases {
+  fill: none;		
+  stroke: lightskyblue;
+  stroke-width: 3px;
+}
+
+
+@keyframes dash{
+  to {
+      stroke-dashoffset:0;
+  }
+}
