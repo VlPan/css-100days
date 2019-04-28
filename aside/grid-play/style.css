@@ -1,0 +1,16 @@
+.container {
+  outline: 1px solid seagreen;
+  min-height: 500px;
+  display: grid;
+
+  grid-template-columns: 40px 50px auto 50px 40px;
+  grid-template-rows: 25% 100px auto;
+}
+
+.item {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background: springgreen;
+}
